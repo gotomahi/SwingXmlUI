@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="Vehicle"  external_atts="true" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com screen.xsd">
+	<action>com.gui.policy.VehicleAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,0,0,0,0">
+		<property label="VIN" type="Label" position="0,0" size="80,25" />
+		<property name="treeMap.policyMap.vehicle.vin" type="TextField" position="1,0" size="150,25" />
+		<property label="Vechile Price" type="Label" position="0,1" size="80,25" />
+		<property name="treeMap.policyMap.vehicle.vehiclePrice" type="TextField" position="1,1" size="150,25" />
+	</panel>
+</page>

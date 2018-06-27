@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="Dealer">
+	<action>com.gui.org.DealerAction</action>
+	<panel dimension="0,0,10,5,5,5,5,-1,-1,1">
+		<property name="Dealer Name" type="Label" dimension="0,0,8,5,5,5,5,25,80" />
+		<property name="dealerName" type="TextField" dimension="0,1,8,5,5,5,5,25,150" />
+		<property name="Dealer Code" type="Label" dimension="0,2,8,5,5,5,5,25,80" />
+		<property name="dealerCode" type="TextField" dimension="0,3,8,5,5,5,5,25,150" />
+		<property name="Account Number" type="Label" dimension="1,0,8,5,5,5,5,25,80" />
+		<property name="bankDetails1" type="TextField" dimension="1,1,8,5,5,5,5,25,150" />
+		<property name="Sort Code" type="Label" dimension="1,2,8,5,5,5,5,25,80" />
+		<property name="bankDetails2" type="TextField" dimension="1,3,8,5,5,5,5,25,150" />
+		<property name="Account Name" type="Label" dimension="2,0,8,5,5,5,5,25,80" />
+		<property name="bankDetails3" type="TextField" dimension="2,1,8,5,5,5,5,25,150" />
+		<property name="Bank Name" type="Label" dimension="2,2,8,5,5,5,5,25,80" />
+		<property name="bankDetails4" type="TextField" dimension="2,3,8,5,5,5,5,25,150" />
+		<property name="Organisation" type="Label" dimension="3,0,8,5,5,5,5,25,80" />
+		<property name="org" type="ComboBox" list="organisations" labelProperty="orgName" valueProperty="orgId" dimension="3,1,8,5,5,5,5,25,150" />
+		<panel dimension="4,2,11,5,5,5,5,25,80">
+			<property name="Search" type="Button" dimension="0,0,8,5,5,5,5,25,80" />
+		</panel>
+	</panel>
+	<panel dimension="1,0,10,0,0,0,0,-1,-1,1">
+		<datagrid name="dealerList" renderers="rendererData" dimension="0,0,10,0,0,20,0,-1,-1,1">
+			<column property="dealerName" name="Dealer Name" editable="true" />
+			<column property="dealerCode" name="Dealer Code" />
+			<column property="organisation" name="Organisation" renderer_label="orgName" renderer="checkbox" renderer_data="organisations" editable="true" />
+			<column property="bankDetails1" name="Account Number" />
+			<column property="bankDetails2" name="Sort Code" />
+			<column property="bankDetails3" name="Account Name" />
+			<column property="bankDetails4" name="Bank Name" />
+			<popup-menu>
+				<menu-item name="Edit" />
+				<menu-item name="Delete" />
+				<menu-item name="New" />
+			</popup-menu>
+			<toolbars dimension="1,0,10,0,0,0,0,-1,-1,1">
+				<toolbar name="New" image="icon_next.gif" />
+				<toolbar name="Edit" image="icon_next.gif" />
+				<toolbar name="Delete" image="icon_next.gif" />
+			</toolbars>
+		</datagrid>
+	</panel>
+
+</page>

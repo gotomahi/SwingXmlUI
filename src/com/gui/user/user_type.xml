@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="UserType">
+	<Panel dimension="0,0,1,1,1.0,1.0,18,1,-5,5,5,5">
+		<Label label="User Type" position="0,0" size="80,25" />
+		<TextField name="userType" position="1,0" size="150,25"/>
+	</Panel>
+	<Panel dimension="0,1,1,1,1.0,1.0,18,1,-5,5,5,5">
+		<Button name="Search" action_command="SearchUserTypes" default="true" position="0,0" size="80,25" />
+		<Button name="Save"  action_command="SaveUserTypes" position="1,0,1" size="80,25" />
+		<Button name="Reset"  action_command="ResetUserTypes" position="2,0" size="80,25" />
+	</Panel>
+	<Panel dimension="0,2,1,1,1.0,1.0,18,1,-5,5,5,5">
+		<DataGrid name="UserTypeList" row-height="25" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0">
+			<column property="userType" name="User Type" />
+			<column property="role" name="Role" editable="true" />
+			<popup-menu>
+				<menu-item name="Edit" />
+				<menu-item name="Delete" />
+				<menu-item name="New" />
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="New" image="gui/images/add.png" />
+				<toolbar name="Edit" image="gui/images/edit.png" edit="true" />
+				<toolbar name="Delete" image="gui/images/delete.png" delete="true" />
+			</toolbars>
+		</DataGrid>
+	</Panel>
+
+</PanelPage>

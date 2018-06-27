@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Login" menu_visible="false">
+	<Panel dimension="0,0,1,1,1.0,1.0,10,1,5,5,5,5">
+		<Label label="UserName" position="0,0" size="80,25" />
+		<TextField name="userId" position="1,0" size="250,25" validators="mandatory" />
+		<Label label="Password" position="0,1" size="80,25" />
+		<Password name="password" position="1,1" size="250,25" validators="mandatory" />		
+		<Panel position="1,2">
+			<Button name="login" validate="true" position="1,0" size="80,25" default="true" next_page="MainFrame" />
+		</Panel>
+	</Panel>
+</PanelPage>

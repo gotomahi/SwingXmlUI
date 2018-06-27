@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<menu-item name="Home" screen="Home" />
+	<menu-item name="Policy Admin">
+		<menu>
+			<menu-item name="Policy" screen="Policy" />
+			<menu-item name="Policy Search" screen="PolicySearch" />
+		</menu>
+	</menu-item>
+	<menu-item name="Claim">
+		<menu>
+			<menu-item name="Claim" screen="Claim" />
+			<menu-item name="Claim Search" screen="ClaimSearch" />
+		</menu>
+	</menu-item>
+	<menu-item name="Administration">
+		<menu>
+			<menu-item name="User Type" screen="UserType" />
+			<menu-item name="Organisation" screen="Organisation" />
+			<menu-item name="Dealer" screen="Dealer" />
+			<menu-item name="User" screen="User" />
+			<menu-item name="Client" screen="Client" />
+		</menu>
+	</menu-item>
+	<menu-item name="Reports">
+		<menu>
+			<menu-item name="Policy Report" screen="PolicyReport" />
+			<menu-item name="Claim Report" screen="ClaimReport" />
+		</menu>
+	</menu-item>
+	<menu-item name="Logout" screen="Login" />
+</menu>

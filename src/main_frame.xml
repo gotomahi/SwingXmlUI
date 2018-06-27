@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Frame name="MainFrame" width="800" height="600" title="Auto Insure">
+	<ToolBar position="North"/>
+	<Menu name="MainMenu" file="main_menu.xml" />
+	<module name="claim" path="module-claim.xml" />
+	<module name="general" path="module-general.xml" />
+	<module name="login" path="module-login.xml" />
+	<module name="org" path="module-org.xml" />
+	<module name="policy" path="module-policy.xml" />
+	<module name="user" path="module-user.xml" />
+	<ToolBar position="South">
+		<property type="Label" label="Status" size="100,20" dimension="0,0,1,1,1.0,1.0,18,1,0,0,0,0" />
+		<property type="ProgressBar" name="Progress" size="150,20" dimension="1,0,1,1,1.0,1.0,13,0,0,0,0,0" />
+		<property type="Action" name="Errors" image="gui/images/error.png" next_page="Errors" size="10,20" dimension="2,0,1,1,1.0,1.0,13,0,0,0,0,10" />
+	</ToolBar>
+</Frame>

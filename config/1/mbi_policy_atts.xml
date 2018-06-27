@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<atts>
+		<attribute name="Make" property="planMap.policy.MakeModel.make" />
+		<attribute name="Model" property="planMap.policy.MakeModel..model" />
+		<attribute name="Class" property="planMap.policy.MakeModel.class" />
+		<attribute name="PloicySoldDate" property="planMap.policy.policySoldDate" />
+		<attribute name="Dealer" property="planMap.policy.dealerId" />
+		<attribute name="ProductType" property="planMap.policy.used.productType" />
+		<attribute name="StartDate" property="planMap.policy.used.startDate" />
+		<attribute name="CoverType" property="planMap.policy.used.coverType" />
+		<attribute name="Term" property="planMap.policy.used.term" />
+		<attribute name="PolicyAmount" property="planMap.policy.used.policyAmount" />
+
+		<attribute name="Mileage" property="planMap.policy.vehicle.mileage" />
+		<attribute name="VehicleSoldDate" property="planMap.policy.vehicle.vehicleSoldDate" />
+		<attribute name="RegNo" property="planMap.vehicle.regNumber" />
+		<attribute name="VIN" property="planMap.vehicle.vinNumber" />
+		<attribute name="PurchasePrice" property="planMap.vehicle.purchasePrice" />
+
+		<attribute name="Title" property="planMap.plan.customer.title" />
+		<attribute name="LastName" property="planMap.plan.customer.lastName" />
+		<attribute name="CompanyName" property="planMap.plan.customer.companyName" />
+		<attribute name="Email" property="planMap.plan.customer.email" />
+		<attribute name="PhoneNo" property="planMap.plan.customer.phoneNo" />
+		<attribute name="MobileNo" property="planMap.plan.customer.mobileNo" />
+		<attribute name="DOB" property="planMap.plan.customer.dateOfBirth" />
+		<attribute name="Address1" property="planMap.plan.customer.address1" />
+		<attribute name="Address2" property="planMap.plan.customer.address2" />
+		<attribute name="Address3" property="planMap.plan.customer.address3" />
+		<attribute name="Address4" property="planMap.plan.customer.address4" />
+		<attribute name="PostCode" property="planMap.plan.customer.postCode" />
+	</atts>
+	<derived_atts>
+		<attribute class="com.autoinsure.policy.rule.PolicyType" />
+		<attribute class="com.autoinsure.policy.rule.PlanNumber" />
+		<attribute class="com.autoinsure.policy.rule.PolicyNumber" />
+		<attribute class="com.autoinsure.policy.rule.ExpiryDate" />
+	</derived_atts>
+</config>

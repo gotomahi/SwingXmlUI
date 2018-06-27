@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="name" use="optional"/>
+          <xs:attribute type="xs:string" name="type" use="optional"/>
+          <xs:attribute type="xs:string" name="dimension" use="optional"/>
+          <xs:attribute type="xs:string" name="list" use="optional"/>
+          <xs:attribute type="xs:string" name="inpageaction" use="optional"/>
+          <xs:attribute type="xs:string" name="actionName" use="optional"/>
+          <xs:attribute type="xs:string" name="default_value" use="optional"/>
+          <xs:attribute type="xs:string" name="listeners" use="optional"/>
+          <xs:attribute type="xs:string" name="labelProperty" use="optional"/>
+          <xs:attribute type="xs:string" name="property" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="panel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="property" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="node" minOccurs="0"/>
+        <xs:element ref="PanelComponent" minOccurs="0"/>
+        <xs:element ref="panel" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="dimension" use="optional"/>
+      <xs:attribute type="xs:string" name="treepane" use="optional"/>
+      <xs:attribute type="xs:short" name="divider_location" use="optional"/>
+      <xs:attribute type="xs:string" name="border_left_title" use="optional"/>
+      <xs:attribute type="xs:string" name="position" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="page">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="panel"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+      <xs:attribute type="xs:string" name="action" use="optional"/>
+      <xs:attribute type="xs:string" name="border_left_title" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="node">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="node" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="action" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+      <xs:attribute type="xs:string" name="screen" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="action">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="name"/>
+          <xs:attribute type="xs:string" name="image"/>
+          <xs:attribute type="xs:string" name="description"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PanelComponent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="panel" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="dimension"/>
+      <xs:attribute type="xs:string" name="list"/>
+      <xs:attribute type="xs:string" name="type"/>
+      <xs:attribute type="xs:string" name="name"/>
+      <xs:attribute type="xs:string" name="border_left_title"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Dealer" header="Dealer">
+	<Panel dimension="0,0,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<Label label="Dealer Name" position="0,0" size="80,25" />
+		<TextField name="criteria.dealerName" upper="true" position="1,0" size="150,25"/>
+		<Label label="Dealer Code" position="2,0" size="80,25"/>
+		<TextField name="criteria.dealerCode" position="3,0" size="150,25"/>
+		<Label label="Organisation" position="0,1" size="80,25"/>
+		<ComboBox name="criteria.orgId" list="organisations" labelProperty="orgName" default_value="Any" position="1,1" size="150,25"/>
+	</Panel>
+	<Panel dimension="0,1,1,1,1.0,1.0,10,1,-5,0,0,0">
+		<Button name="Search" action_command="SearchDealers" default="true" action_on_enter="true" position="0,0" size="80,25"/>
+		<Button name="Save" action_command="SaveDealers" position="0,0" size="80,25"/>
+	</Panel>
+	<Panel dimension="0,2,1,1,1.0,1.0,18,1,-5,0,0,0">
+		<DataGrid name="DealerList" row-height="25" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0">
+			<column property="dealerName" name="Dealer Name" editable="true" />
+			<column property="dealerCode" name="Dealer Code" editable="true" />
+			<column property="organisation" name="Organisation" renderer_label="orgName" renderer="ComboBox" renderer_data="organisations" editable="true" />
+			<column property="bankDetails1" name="Account Number" editable="true" />
+			<column property="bankDetails2" name="Sort Code" editable="true" />
+			<column property="bankDetails3" name="Account Name" editable="true" />
+			<column property="bankDetails4" name="Bank Name" editable="true" />
+			<popup-menu>
+				<menu-item name="Edit" />
+				<menu-item name="Delete" />
+				<menu-item name="New" />
+				<menu-item name="DealerVariable" record_name="dealer" action_command="loadDealerVariables"/>
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="New" image="gui/images/add.png" />
+				<toolbar name="Edit" image="gui/images/edit.png" edit="true" />
+				<toolbar name="Delete" image="gui/images/delete.png" delete="true" />
+			</toolbars>
+		</DataGrid>
+	</Panel>
+
+</PanelPage>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="Organisation">
+	<action>com.gui.org.OrgAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<property label="Organisation" type="Label" position="0,0" size="80,25"/>
+		<property name="orgName" type="TextField" position="1,0" size="150,25"/>
+		<property label="Client" type="Label" position="0,1" size="80,25"/>
+		<property name="client" type="ComboBox" list="clients" labelProperty="clientName" valueProperty="clientId" position="1,1" size="150,25"/>
+		
+	</panel>
+	<panel dimension="0,1,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<property name="Search" type="Button" default="true" position="0,0" size="80,25" />
+		<property name="Save" type="Button" position="1,0,1" size="80,25" />
+		<property name="Reset" type="Button" position="2,0" size="80,25" />
+	</panel>
+	<panel dimension="0,2,1,1,1.0,1.0,18,1,-5,0,0,0">
+		<datagrid name="orgList" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0">
+			<column property="orgName" name="Organisation" editable="true" />
+			<column property="client" name="Client" renderer_label="clientName" renderer="Combobox" renderer_data="clients" editable="true" />
+			<column property="address1" name="House No" />
+			<column property="address2" name="Street" />
+			<popup-menu>
+				<menu-item name="Edit" />
+				<menu-item name="Delete" />
+				<menu-item name="New" />
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="New" image="gui/images/add.png" />
+				<toolbar name="Edit" image="gui/images/edit.png" />
+				<toolbar name="Delete" image="gui/images/delete.png" />
+			</toolbars>
+		</datagrid>
+	</panel>
+
+</page>

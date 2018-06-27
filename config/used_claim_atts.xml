@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<claim-atts>
+	<atts name="claim">
+		<att name="regNumber" type="textfield" />
+	</atts>
+</claim-atts>

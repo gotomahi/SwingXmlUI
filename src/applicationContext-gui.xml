@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean name="PanelPage" class="com.framework.swing.ui.PanelPage" scope="prototype"/>
+	<bean name="DialogPage" class="com.framework.swing.ui.DialogPage" scope="prototype" />
+	<bean name="PanelComponent" class="com.framework.swing.ui.PanelComponent" scope="prototype" />
+	<bean name="Button" class="com.framework.swing.components.Button" scope="prototype" />
+	<bean name="CheckBox" class="com.framework.swing.components.CheckBox" scope="prototype" />
+	<bean name="ComboBox" class="com.framework.swing.components.ComboBox" scope="prototype" />
+	<bean name="DataGrid" class="com.framework.swing.components.DataGrid" scope="prototype" />
+	<bean name="DatePicker" class="com.framework.swing.components.DatePicker" scope="prototype" />
+	<bean name="EditorPane" class="com.framework.swing.components.EditorPane" scope="prototype" />
+	<bean name="File" class="com.framework.swing.components.JFile" scope="prototype" />
+	<bean name="Label" class="com.framework.swing.components.Label" scope="prototype" />
+	<bean name="MenuBar" class="com.framework.swing.components.MenuBar" scope="prototype" />
+	<bean name="Password" class="com.framework.swing.components.Password" scope="prototype" />
+	<bean name="PopupMenu" class="com.framework.swing.components.PopupMenu" scope="prototype" />
+	<bean name="SMenuItem" class="com.framework.swing.components.SMenuItem" scope="prototype" />
+	<bean name="TextArea" class="com.framework.swing.components.TextArea" scope="prototype" />
+	<bean name="TextField" class="com.framework.swing.components.TextField" scope="prototype" />
+	<bean name="ToolBar" class="com.framework.swing.components.ToolBar" scope="prototype" />
+	<bean name="Tree" class="com.framework.swing.components.Tree" scope="prototype" />
+	<bean name="TreePane" class="com.framework.swing.ui.TreePane" scope="prototype" />
+	<bean name="Dialog" class="com.framework.swing.components.Dialog" scope="prototype" />
+	<bean name="Panel" class="com.framework.swing.components.Panel"  scope="prototype"/>
+	<bean name="TabbedPane" class="com.framework.swing.components.TabbedPane" scope="prototype" />
+	<bean name="ProgressBar" class="com.framework.swing.components.ProgressBar"  scope="prototype"/>
+	<bean name="beanLocator" class="com.framework.BeanLocator" factory-method="getInstance"/>
+</beans>

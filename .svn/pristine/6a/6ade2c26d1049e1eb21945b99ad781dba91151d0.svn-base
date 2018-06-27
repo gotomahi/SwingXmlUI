@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="Customer" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com screen.xsd">
+	<action>com.gui.claim.PayeeAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,0,0,0,0">
+		<property label="Payee" type="Label" position="0,0" size="80,25" />
+		<property name="treeMap.claim.payee.payeeType" type="ComboBox" list="treeMap.PayeeTypes" default_value="--Please Select--" position="1,0" size="150,25" listeners="ActionListener"
+			actionName="PayeeType" />
+		<property label="Payee Name" type="Label" position="0,1" size="80,25" />
+		<property name="treeMap.claim.payee.payeeName" type="TextField" position="1,1" size="150,25" />
+		<property label="Dealer Code" type="Label" position="2,1" size="80,25" />
+		<property name="treeMap.claim.payee.dealerCode" type="TextField" enable_expr="${treeMap.claim.payee.payeeType}=Dealer" position="3,1" size="150,25" />
+		<property label="Transaction Ref" type="Label" position="0,2" size="80,25" />
+		<property name="treeMap.claim.payee.transactionRef" type="TextField" position="1,2" size="150,25" />
+		<property label="Bank Details1" type="Label" position="2,2" size="80,25" />
+		<property name="treeMap.claim.payee.bankDetails1" type="TextField" position="3,2" size="150,25" />
+		<property label="Bank Details2" type="Label" position="0,3" size="80,25" />
+		<property name="treeMap.claim.payee.bankDetails2" type="TextField" position="1,3" size="150,25" />
+		<property label="Bank Details3" type="Label" position="2,3" size="80,25" />
+		<property name="treeMap.claim.payee.bankDetails3" type="TextField" position="3,3" size="150,25" />
+		<property label="Bank Details4" type="Label" position="0,4" size="80,25" />
+		<property name="treeMap.claim.payee.bankDetails4" type="TextField" position="1,4" size="150,25" />
+		<property label="Address1" type="Label" position="2,4" size="80,25" />
+		<property name="treeMap.claim.payee.address1" type="TextField" position="3,4" size="150,25" />
+		<property label="Address2" type="Label" position="0,5" size="80,25" />
+		<property name="treeMap.claim.payee.address2" type="TextField" position="1,5" size="150,25" />
+		<property label="Address3" type="Label" position="2,5" size="80,25" />
+		<property name="treeMap.claim.payee.address3" type="TextField" position="3,5" size="150,25" />
+		<property label="Address4" type="Label" position="0,6" size="80,25" />
+		<property name="treeMap.claim.payee.address4" type="TextField" position="1,6" size="150,25" />
+	</panel>
+</page>

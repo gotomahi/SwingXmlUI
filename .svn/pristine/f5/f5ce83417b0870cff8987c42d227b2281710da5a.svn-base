@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessment_checks>
+	<assessment_check name="before_policy_start"
+		class="com.autoinsure.service.claim.assessment.BeforePolicyStart">
+		<failure></failure>
+		<success></success>
+	</assessment_check>
+</assessment_checks>

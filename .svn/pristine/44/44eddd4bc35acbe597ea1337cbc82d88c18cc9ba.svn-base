@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen-config>
+	<screen name="Errors" file="com/gui/error.xml" />
+	<screen name="Home" file="com/gui/home.xml" />
+</screen-config>

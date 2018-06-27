@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="Customer" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com screen.xsd">
+	<action>com.gui.policy.CustomerAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,0,0,0,0">
+		<property label="Title" type="Label" position="0,0" size="80,25"/>
+		<property name="treeMap.plan.customer.title" type="ComboBox" list="treeMap.Titles" default_value="--Please Select--" position="1,0" size="150,25" />
+		<property label="First Name" type="Label" position="0,1" size="80,25" />
+		<property name="treeMap.plan.customer.firstName" type="TextField" position="1,1" size="150,25" />
+		<property label="Last Name" type="Label" position="2,1" size="80,25" />
+		<property name="treeMap.plan.customer.lastName" type="TextField" position="3,1" size="150,25" />
+		<property label="Middle Name" type="Label" position="0,2" size="80,25"/>
+		<property name="treeMap.plan.customer.middleName" type="TextField" position="1,2" size="150,25"/>
+	</panel>
+	<panel dimension="0,1,1,1,1.0,1.0,18,1,0,0,0,0">
+		<property label="Email" type="Label" position="0,0" size="80,25"/>
+		<property name="treeMap.plan.customer.email" type="TextField" position="1,0" size="150,25" />
+		<property label="Contact No" type="Label" position="2,0" size="80,25" />
+		<property name="treeMap.plan.customer.contactNo" type="TextField" position="3,0" size="150,25"/>
+		<property label="House No" type="Label" position="0,1" size="80,25"/>
+		<property name="treeMap.plan.customer.address1" type="TextField" position="1,1" size="150,25"/>
+		<property label="Street" type="Label" position="2,1" size="80,25"/>
+		<property name="treeMap.plan.customer.address2" type="TextField" position="3,1" size="150,25"/>
+		<property label="Town" type="Label" position="0,2" size="80,25"/>
+		<property name="treeMap.plan.customer.address3" type="TextField" position="1,2" size="150,25"/>
+		<property label="Post Code" type="Label" position="2,2" size="80,25"/>
+		<property name="treeMap.plan.customer.address4" type="TextField" position="3,2" size="150,25"/>
+		<property label="Country" type="Label" position="0,3" size="80,25"/>
+		<property name="treeMap.plan.customer.country" type="TextField" position="1,3" size="150,25"/>
+	</panel>
+	<panel dimension="0,2,1,1,1.0,1.0,10,1,0,0,0,0">
+		<property name="Search User" type="Button" position="0,0" size="80,25" next_page="CustomerSearch"/>
+	</panel>
+</page>

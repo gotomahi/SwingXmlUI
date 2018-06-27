@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="ClaimDetails">
+	<action>com.gui.claim.ClaimDetailsAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<property label="Failure Date" type="Label" position="0,0" size="80,25" />
+		<property name="treeMap.claim.failureDate" type="DatePicker" position="1,0" size="150,25" />
+		<property label="Reported Date" type="Label" position="2,0" size="80,25" />
+		<property name="treeMap.claim.reportedDate" type="DatePicker" position="3,0" size="150,25" />
+		<property label="Repairing Dealer" type="Label" position="0,1" size="80,25" />
+		<property name="treeMap.claim.repairingDealer" type="ComboBox" list="treeMap.DealerList" labelProperty="dealerName" default_value="--Please Select--" position="1,1" size="150,25" />
+		<property label="Repair Order" type="Label" position="2,1" size="80,25" />
+		<property name="treeMap.claim.repairOrder" type="TextField" position="3,1" size="150,25" />
+		<property label="Claim Mileage" type="Label" position="0,2" size="80,25" />
+		<property name="treeMap.claim.claimMileage" type="TextField" position="1,2" size="150,25" />
+		<property label="Claim Limit" type="Label" position="2,2" size="80,25" />
+		<property name="treeMap.claim.claimLimit" type="TextField" position="3,2" size="150,25" />
+	</panel>
+	<panel dimension="0,2,1,1,1.0,1.0,18,1,-5,0,0,0">
+		<datagrid name="treeMap.claim.innerClaims" row-height="25" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0">
+			<column property="causalPart.causalPartArea" name="CausalPart Area" renderer="ComboBox" renderer_data="treeMap.CausalPartAreas" editable="true" listeners="ActionListener" />
+			<column property="causalPart" name="Causal Part" renderer="ComboBox" dynamic_data="true" renderer_label="causalPart" renderer_data="Parts" editable="true" />
+			<column property="partCost" name="Part Cost" editable="true" renderer="Numeric"/>
+			<column property="partCount" name="Part Count" editable="true" renderer="Numeric"/>
+			<column property="labourCost" name="Labour Cost" editable="true" renderer="Numeric"/>
+			<popup-menu>
+				<menu-item name="New" image="gui/images/add.png" next_page="Claim.ClaimDetails" />
+				<menu-item name="Edit" image="gui/images/edit.png" next_page="Claim.ClaimDetails" />
+				<menu-item name="Cancel" image="gui/images/cancel.png" next_page="Claim.ClaimDetails" />
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="New" image="gui/images/add.png" next_page="Claim.ClaimDetails" />
+				<toolbar name="Edit" image="gui/images/edit.png" next_page="Claim.ClaimDetails" />
+				<toolbar name="Cancel" image="gui/images/cancel.png" next_page="Claim.ClaimDetails" />
+			</toolbars>
+		</datagrid>
+	</panel>
+
+</page>

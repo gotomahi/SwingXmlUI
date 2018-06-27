@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen-config>
+	<!-- <screen name="Policy" file="${clientId}/policy.xml" /> -->
+	<!-- <screen name="PolicySearch" file="${clientId}/policy_search.xml" /> -->
+	<!-- <screen name="Prelim" file="${clientId}/prelim.xml" /> -->
+	<!-- <screen name="Product" file="${clientId}/product.xml" /> -->
+	<!-- <screen name="Vehicle" file="${clientId}/vehicle.xml" /> -->
+	<!-- <screen name="Customer" file="${clientId}/customer.xml" /> -->
+	<!-- <screen name="PolicyNotes" file="com/gui/policy/notes.xml" /> -->
+	<!-- <screen name="PolicyDocuments" file="com/gui/policy/documents.xml" /> -->
+	<!-- <screen name="CustomerSearch" file="${clientId}/customer_search.xml" /> -->
+	<screen name="Policy" file="com/gui/policy/policy.xml" />
+	<screen name="PolicySearch" file="com/gui/policy/policy_search.xml">
+		<param name="dialog" value="false" />
+		<param name="policySearchPage" value="Policy.Plan" />
+	</screen>
+	<screen name="Prelim" file="com/gui/policy/prelim.xml" />
+	<screen name="Product" file="com/gui/policy/product.xml" />
+	<screen name="Vehicle" file="com/gui/policy/vehicle.xml" />
+	<screen name="Customer" file="com/gui/policy/customer.xml" />
+	<screen name="PolicyNotes" file="com/gui/policy/notes.xml" />
+	<screen name="PolicyDocuments" file="com/gui/policy/documents.xml" />
+	<screen name="CustomerSearch" file="com/gui/policy/customer_search.xml" />
+	<screen name="PolicySummary" file="com/gui/policy/summary.xml" />
+</screen-config>

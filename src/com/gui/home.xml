@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Home" menu_visible="true">
+	<Panel dimension="0,0,1,1,1.0,1.0,12,1,0,0,0,0">
+		<Label label="Choose menu item to procede." position="0,0" size="200,25" />
+	</Panel>
+</PanelPage>

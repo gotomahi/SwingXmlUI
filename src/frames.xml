@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frames name="Frame" width="800" height="600" title="Auto Insure">
+	<frame name="LoginFrame" path="login_frame.xml" default="true"/>
+	<frame name="MainFrame" path="main_frame.xml" />
+</frames>

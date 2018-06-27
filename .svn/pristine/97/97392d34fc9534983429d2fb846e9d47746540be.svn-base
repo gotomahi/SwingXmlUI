@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="User" action="com.gui.user.UserAction">
+	<panel dimension="1,0,18,5,5,5,5,300,750">
+		<tabbedpane>
+			<tab name="Create User" screen="UserCreate" />
+			<tab name="Login" screen="Login" />
+		</tabbedpane>
+	</panel>
+</page>

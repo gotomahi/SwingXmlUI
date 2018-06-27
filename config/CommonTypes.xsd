@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org" xmlns="http://www.example.org" elementFormDefault="qualified">
+	<xs:simpleType name="NameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ActionClassType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ActionType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TreePaneType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DimensionType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PropertyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Label"/>
+			<xs:enumeration value="ComboBox"/>
+			<xs:enumeration value="DatePicker"/>
+			<xs:enumeration value="TextField"/>
+			<xs:enumeration value="Button"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositionType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LabelType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ListType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ListenersType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SizeType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DefaultValueType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ActionNameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]*[A-Z]*[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DividerLocationType">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

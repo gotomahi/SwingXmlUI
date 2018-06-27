@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<static_data>
+	<data name="Titles">
+		<item>Mr</item>
+		<item>Mrs</item>
+		<item>Ms</item>
+		<item>Miss</item>
+	</data>
+	<data name="Months">
+		<item>January</item>
+		<item>Febraury</item>
+		<item>March</item>
+		<item>April</item>
+		<item>May</item>
+		<item>June</item>
+		<item>July</item>
+		<item>August</item>
+		<item>September</item>
+		<item>October</item>
+		<item>November</item>
+		<item>December</item>
+	</data>
+</static_data>

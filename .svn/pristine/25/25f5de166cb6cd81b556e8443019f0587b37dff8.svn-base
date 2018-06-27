@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="DealerVariable" dialog = "true">
+<action>com.gui.org.DealerVariableAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,0,0,0,0">
+		<property label="Dealer Name" type="Label" position="0,0" size="80,25"/>
+		<property property="dealer.dealerName" type="Label" position="1,0" size="150,25" />
+		<property label="Dealer Code" type="Label" position="2,0" size="80,25"/>
+		<property property="dealer.dealerCode" type="Label" position="3,0" size="150,25"/>
+		<property label="Account Number" type="Label" position="0,1" size="80,25"/>
+		<property property="dealer.bankDetails1" type="Label" position="1,1" size="150,25"/>
+		<property label="Sort Code" type="Label" position="2,1" size="80,25"/>
+		<property property="dealer.bankDetails2" type="Label" position="3,1" size="150,25"/>
+		<property label="Account Name" type="Label" position="0,2" size="80,25"/>
+		<property property="dealer.bankDetails3" type="Label" position="1,2" size="80,25"/>
+		<property label="Bank Name" type="Label" position="2,2" size="80,25"/>
+		<property property="dealer.bankDetails4" type="Label" position="3,2" size="80,25"/>
+		<property label="Organisation" type="Label" position="0,3" size="80,25" />
+		<property property="dealer.organisation.orgName" type="Label" position="1,3" size="80,25"/>
+
+	</panel>
+	<panel dimension="0,1,1,1,1.0,1.0,10,1,0,0,0,0">
+		<property name="Save" type="Button" position="0,0" size="80,25"/>
+	</panel>
+	<panel dimension="0,2,1,1,1.0,1.0,18,1,0,0,0,0">
+		<datagrid name="dealer.dealerVariables" row-height="25" dimension="0,0,1,1,1.0,1.0,18,1,0,0,0,0">
+			<column property="selected" name="" editable="true" renderer="CheckBox"/>
+			<column property="product.productName" name="Product Name" editable="false" />
+			<column property="rateGroup" name="Rate Group" renderer="ComboBox" renderer_data="DealerVariableList" dynamic_data="true" editable="true" />
+			<column property="param1" name="Param1" editable="true" />
+			<column property="param2" name="Param2" editable="true" />
+			<column property="param3" name="Param3" editable="true" />
+			<column property="param4" name="Param4" editable="true" />
+			<column property="param5" name="Param5" editable="true" />
+			<column property="param6" name="Param6" editable="true" />
+		</datagrid>
+	</panel>
+
+</page>

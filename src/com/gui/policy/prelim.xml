@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Prelim" external_atts="true">
+	<Panel dimension="0,0,1,1,1.0,1.0,10,1,0,0,0,0">
+		<Panel border_left_title="" dimension="0,0,1,1,1.0,1.0,10,1,0,0,0,0">
+			<Label label="Make" position="0,0" size="80,25" />
+			<ComboBox name="MakeModel.make" actionName="loadModels" list="MakeList" default_value="Please Select" position="1,0" size="150,25" listeners="ActionListener" />
+			<Label label="Model" position="0,1" size="80,25" />
+			<ComboBox name="MakeModel.model" actionName="loadClasses" list="ModelList" default_value="Please Select" position="1,1" size="150,25" listeners="ActionListener" />
+			<Label label="Class" position="0,2" size="80,25" />
+			<ComboBox name="MakeModel.clss" list="ClassList" default_value="Please Select" position="1,2" size="150,25" />
+			<Label label="Sold Date" position="0,3" size="150,25" />
+			<DatePicker name="policyMap.vehicle.soldDate" position="1,3" size="150,25" />
+			<Label label="Reg Date" position="0,4" size="80,25" />
+			<DatePicker name="policyMap.vehicle.regDate" position="1,4" size="150,25" />
+			<Label label="Policy Sold Date" position="0,5" size="80,25" />
+			<property name="policyMap.policySoldDate" position="1,5" size="150,25" />
+			<Label label="Dealer" position="0,6" size="80,25" />
+			<ComboBox name="policyMap.dealer" list="DealerList" labelProperty="dealerName" default_value="Please Select" position="1,6" size="150,25" />
+			<Label label="Employee" position="0,7" size="80,25" />
+			<TextField name="policyMap.employee" position="1,7" size="150,25" />
+			<Panel position="0,8">
+				<Button name="Show Products" action_command="showProducts" inpageaction="true" default="true" position="0,0" size="80,25" />
+			</Panel>
+		</Panel>
+		<Panel border_left_title="" dimension="1,0,1,1,1.0,1.0,10,1,0,0,0,0">
+			 <PanelComponent dimension="0,0,1,1,1.0,1.0,10,1,0,0,0,0" list="Products" name="${productType}" border_left_title="">
+				<Panel dimension="0,0,1,1,1.0,1.0,18,1,0,0,0,0">
+					<CheckBox name="products.${productType}.productType" position="0,0" size="20,25" />
+					<Label label="productType" position="1,0" size="80,25" />
+					<ComboBox name="products.${productType}.product" list="products.${productType}.ProductList" labelProperty="productName" default_value="Please Select" position="2,0"
+						size="250,25" listeners="ActionListener" actionName="Product" />
+				</Panel>
+				<Panel dimension="0,1,1,1,1.0,1.0,10,1,0,0,0,0">
+					<Label label="Cover Type" position="0,0" size="80,25" />
+					<ComboBox name="products.${productType}.coverType" list="products.${productType}.CoverTypeList" default_value="Please Select" position="1,0" size="150,25" actionName="CoverType" />
+					<Label label="Policy Term" position="0,1" size="80,25" />
+					<ComboBox name="products.${productType}.coverPeriod" list="products.${productType}.TermList" default_value="Please Select" position="1,1" size="150,25" listeners="ActionListener"
+						actionName="Term" />
+					<Label label="Policy Start Date" position="0,2" size="80,25" />
+					<DatePicker name="products.${productType}.startDate" position="1,2" size="150,25" />
+					<Label label="Policy Amount" position="0,3" size="80,25" />
+					<TextField name="products.${productType}.coverAmount" position="1,3" size="150,25" />
+				</Panel>
+			</PanelComponent>
+			<Panel dimension="0,1,1,1,1.0,1.0,10,1,0,0,0,0">
+				<Label label="Policy Amount" position="0,0" size="80,25" />
+				<TextField name="planAmount" position="1,0" size="250,25" />
+			</Panel>
+		</Panel>
+	</Panel>
+</PanelPage>

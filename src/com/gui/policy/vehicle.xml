@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Vehicle" external_atts="true" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com screen.xsd">
+	<Panel dimension="0,0,1,1,1.0,1.0,18,1,0,0,0,0">
+		<Label label="VIN" position="0,0" size="80,25" />
+		<TextField name="treeMap.policyMap.vehicle.vin" position="1,0" size="150,25" />
+		<Label label="Vechile Price" position="0,1" size="80,25" />
+		<TextField name="treeMap.policyMap.vehicle.vehiclePrice" position="1,1" size="150,25" />
+	</Panel>
+</PanelPage>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<actions>
+		<action path="logout">
+			<plugin type="execute">
+				<session_cleanup remove_all="true" />
+			</plugin>
+			<plugin type="render">
+				<result name="success">Login</result>
+			</plugin>
+		</action>
+		<action path="login" validation="com/web/login_validation.xml">
+			<plugin type="execute">
+				<service name="baseService" method="getObject">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.User" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="User" scope="session" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Home</result>
+			</plugin>
+		</action>
+		
+		<action path="SearchUserTypes">
+			<plugin type="execute">
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.UserType" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="UserTypeList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">UserType</result>
+			</plugin>
+		</action>
+		<action path="SaveUserTypes">
+			<plugin type="execute">
+				<service name="baseService" method="persist">
+					<arguements>
+						<var property="UserTypeList"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">UserType</result>
+			</plugin>
+		</action>
+		
+		<action path="SearchClients">
+			<plugin type="execute">
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Client" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="ClientList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Client</result>
+			</plugin>
+		</action>
+		<action path="SaveClientList">
+			<plugin type="execute">
+				<service name="baseService" method="persist">
+					<arguements>
+						<var proterty="ClientList" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Client</result>
+			</plugin>
+		</action>
+		
+		<action path="OrgSearchInit">
+			<plugin type="execute">
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Client" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="clients" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+		</action>
+		<action path="SearchOrgs">
+			<plugin type="execute">
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Client" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="clients" out="true"/>
+					</arguements>
+				</service>
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Organisation" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="OrgList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Organisation</result>
+			</plugin>
+		</action>
+		<action path="SaveOrgList">
+			<plugin type="execute">
+				<service name="baseService" method="persist">
+					<arguements>
+						<var proterty="OrgList" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Organisation</result>
+			</plugin>
+		</action>
+		
+		<action path="DealerSearchInit">
+			<plugin type="execute">
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Organisation" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="organisations" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+		</action>
+		<action path="SearchDealers">
+			<plugin type="execute">				
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Dealer" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="DealerList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Dealer</result>
+			</plugin>
+		</action>
+		<action path="SaveDealerList">
+			<plugin type="execute">
+				<service name="baseService" method="persist">
+					<arguements>
+						<var proterty="DealerList" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">Organisation</result>
+			</plugin>
+		</action>
+		<action path="loadDealerVariables">
+			<plugin type="execute">
+				<service name="dealerService" method="load">
+					<arguements>
+						<var name="dealer" property="dealer"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">DealerVariables</result>
+			</plugin>
+		</action>
+		<action path="saveDealerVariables">
+			<plugin type="execute">
+				<service name="baseService" method="persist">
+					<arguements>
+						<var name="DlrVarList" type="java.util.HashMap" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success">dealer.variable.success.page</result>
+			</plugin>
+		</action>
+		
+		<action path="empAction">
+			<plugin type="render">
+				<result name="success" type="tiles">emp.page</result>
+			</plugin>
+		</action>
+		<action path="searchEmp">
+			<plugin type="render">
+				<result name="success" type="tiles">emp.search.page</result>
+			</plugin>
+		</action>
+		<action path="searchListEmp">
+			<plugin type="execute">
+				<service name="empService" method="findByCriteria" result="EmpList">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Employee" />
+						<var name="criteria" type="java.util.HashMap" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="error" type="tiles">emp.search.page</result>
+				<result name="success" type="tiles">emp.search.page</result>
+			</plugin>
+		</action>
+		<action path="loadEmp">
+			<plugin type="execute">
+				<service name="empService" method="load">
+					<arguements>
+						<var name="emp" type="com.autoinsure.model.bom.Employee" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">emp.page</result>
+				<result name="error" type="tiles">emp.search.page</result>
+			</plugin>
+		</action>
+		<action path="saveEmp" validation="com/web/emp_validation.xml">
+			<plugin type="execute">
+				<service name="empService" method="persist">
+					<arguements>
+						<var name="emp" type="com.autoinsure.model.bom.Employee" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">emp.save.page</result>
+				<result name="error" type="tiles">emp.page</result>
+			</plugin>
+		</action>
+		<action path="userAction">
+			<plugin type="render">
+				<result name="success" type="tiles">user.page</result>
+			</plugin>
+		</action>
+		<action path="searchUser">
+			<plugin type="render">
+				<result name="success" type="tiles">user.search.page</result>
+			</plugin>
+		</action>
+		<action path="searchListUser">
+			<plugin type="execute">
+				<service name="userService" method="findByCriteria" result="UserList">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.User" />
+						<var name="criteria" type="java.util.HashMap" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="error" type="tiles">user.search.page</result>
+				<result name="success" type="tiles">user.search.page</result>
+			</plugin>
+		</action>
+		<action path="loadUser">
+			<plugin type="execute">
+				<service name="userService" method="load">
+					<arguements>
+						<var name="user" type="com.autoinsure.model.bom.User" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">user.page</result>
+				<result name="error" type="tiles">user.search.page</result>
+			</plugin>
+		</action>
+		<action path="saveUser">
+			<plugin type="execute">
+				<service name="userService" method="persist">
+					<arguements>
+						<var name="user" type="com.autoinsure.model.bom.User" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">user.save.page</result>
+				<result name="error" type="tiles">user.page</result>
+			</plugin>
+		</action>
+		<!-- Policy -->
+		<action path="PolicyInit">
+			<plugin type="render">
+				<var name="$planMap.plan" type="com.autoinsure.model.bom.Plan" />
+			</plugin>
+		</action>
+		<action path="showProducts" scope="session">			
+			<plugin type="execute">
+				<service name="productManager" method="getProductTypes">
+					<arguements>
+						<var name="clientId" property="User.organisation.client.clientId"/>
+						<var name="Products" out="true"/>
+					</arguements>
+				</service>
+				<service name="productManager" method="getPolicyAtts">
+					<arguements>
+						<var name="clientId" property="User.organisation.client.clientId"/>
+						<var name="PolicyAtts" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">Policy.Prelim</result>
+				<result name="error" type="tiles">Policy.Prelim</result>
+			</plugin>
+		</action>
+		<action path="prelimDetails" scope="session">
+			<plugin type="execute">
+				<service name="makeModelService" method="getMakes">
+					<arguements>					
+						<var name="criteria" type="java.util.HashMap" />	
+						<var name="criteria.clientId" property="User.organisation.client.clientId"/>					
+						<var name="MakeList" out="true"/>
+					</arguements>
+				</service>
+				<service name="baseService" method="findByCriteria">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Dealer" />
+						<var name="criteria" type="java.util.HashMap" />						
+						<var name="DealerList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">Policy.Prelim</result>
+				<result name="error" type="tiles">Policy.Prelim</result>
+			</plugin>
+		</action>
+		<action path="loadModels" scope="session">
+			<plugin type="execute">
+				<service name="makeModelService" method="getModels">
+					<arguements>
+						<var name="criteria" type="java.util.HashMap" />	
+						<var name="criteria.clientId" property="User.organisation.client.clientId"/>
+						<var name="criteria.make" property="MakeModel.make"/>					
+						<var name="ModelList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">Policy.Prelim</result>
+				<result name="error" type="tiles">Policy.Prelim</result>
+			</plugin>
+		</action>
+		<action path="loadClasses" scope="session">
+			<plugin type="execute">
+				<service name="makeModelService" method="getModelTypes">
+					<arguements>
+						<var name="criteria" type="java.util.HashMap" />	
+						<var name="criteria.clientId" property="User.organisation.client.clientId"/>
+						<var name="criteria.make" property="MakeModel.make"/>
+						<var name="criteria.model" property="MakeModel.model"/>					
+						<var name="ClassList" out="true"/>
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">Policy.Prelim</result>
+				<result name="error" type="tiles">Policy.Prelim</result>
+			</plugin>
+		</action>
+		<action path="dealerProducts" scope="session">
+			<plugin type="init">
+				<var name="criteria.dealer.dealerId" property="policy.dealerId" />
+			</plugin>
+			<plugin type="execute">
+				<service name="dealerService" method="getDealerProductsMap" result="$planMap.policy.products">
+					<arguements>
+						<var name="criteria" type="java.util.HashMap" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">prelim.page</result>
+				<result name="error" type="tiles">prelim.page</result>
+			</plugin>
+		</action>
+		<action path="vehicleDetails" scope="session">
+			<plugin type="execute">
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">vehicle.page</result>
+				<result name="error" type="tiles">vehicle.page</result>
+			</plugin>
+		</action>
+		<action path="customerSearch">
+			<plugin type="execute">
+				<service name="customerService" method="findByCriteria" result="$planMap.customerList">
+					<arguements>
+						<var name="model" type="java.lang.String" value="com.autoinsure.model.bom.Customer" />
+						<var name="criteria" type="java.util.HashMap" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">customer.search.page</result>
+				<result name="error" type="tiles">customer.search.page</result>
+			</plugin>
+		</action>
+		<action path="customer" scope="session">
+			<plugin type="execute">
+				<service name="customerService" method="load">
+					<arguements>
+						<var name="customer" property="planMap.plan.customer" />
+					</arguements>
+				</service>
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">customer.page</result>
+				<result name="error" type="tiles">customer.page</result>
+			</plugin>
+		</action>
+		<action path="confirmPolicy" scope="session">
+			<plugin type="execute">
+			</plugin>
+			<plugin type="render">
+				<result name="success" type="tiles">policy.confirm.page</result>
+				<result name="error" type="tiles">policy.confirm.page</result>
+			</plugin>
+		</action>
+		<!-- Policy -->
+	</actions>
+</config>

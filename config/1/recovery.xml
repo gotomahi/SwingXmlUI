@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<policy>
+		<atts file="1/mbi_policy_atts.xml"/>
+		<bands file="1/bands.xml"/>
+	</policy>
+	<claim>
+	</claim>
+</config>

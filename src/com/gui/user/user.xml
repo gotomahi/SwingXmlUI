@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="UserSearch">
+	<action>com.gui.user.UserAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<property label="First Name" type="Label" position="0,0" size="80,25" />
+		<property name="criteria.firstName" type="TextField" position="1,0" size="150,25" />
+		<property label="Last Name" type="Label" position="2,0" size="80,25" />
+		<property name="criteria.lastName" type="TextField" position="3,0" size="150,25" />
+		<property label="User Name" type="Label" position="0,1" size="80,25" />
+		<property name="criteria.userName" type="TextField" position="1,1" size="150,25" />
+		<property label="Email" type="Label" position="2,1" size="80,25" />
+		<property name="criteria.email" type="TextField" position="3,1" size="150,25" />
+		<property label="Organisation" type="Label" position="0,2" size="80,25" />
+		<property name="criteria.org" type="ComboBox" list="organisations" labelProperty="orgName" default_value="Any" position="1,2" size="150,25" />
+
+	</panel>
+	<panel dimension="0,1,1,1,1.0,1.0,10,1,-5,0,0,0">
+		<property name="Search" type="Button" default="true" position="0,0" size="80,25" />
+		<property name="Save" type="Button" position="1,0,1" size="80,25" />
+		<property name="Reset" type="Button" position="2,0" size="80,25" />
+	</panel>
+	<panel dimension="0,2,1,1,1.0,1.0,18,1,-5,0,0,0">
+		<datagrid name="userList" row-height="25" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0" pagination="true">
+			<column property="firstName" name="First Name" editable="true" />
+			<column property="lastName" name="Last Name" editable="true" />
+			<column property="userId" name="User Name" editable="true" />
+			<column property="userType" name="User Type" renderer_label="userType" editable="true" />
+			<column property="organisation" name="Organisation" renderer="ComboBox" renderer_label="orgName" renderer_data="organisations" editable="true" listeners="ActionListener" />
+			<column property="employee" name="Employee" renderer="ComboBox" dynamic_data="true" renderer_label="firstName" renderer_data="employees" editable="true" />
+			<column property="email" name="Email" editable="true" />
+			<column property="dateOfBirth" name="Date Of Birth" editable="true" renderer="DatePicker" />
+			<popup-menu>
+				<menu-item name="Edit" image="gui/images/edit.png" edit="true" />
+				<menu-item name="Delete" image="gui/images/delete.png" delete="true" />
+				<menu-item name="New" image="gui/images/add.png" />
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="New" image="gui/images/add.png" />
+				<toolbar name="Edit" image="gui/images/edit.png" edit="true" />
+				<toolbar name="Delete" image="gui/images/delete.png" delete="true" />
+			</toolbars>
+		</datagrid>
+	</panel>
+
+</page>

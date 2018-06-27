@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="Claim">
+	<action>com.gui.claim.ClaimAction</action>
+	<panel treepane="true" divider_location="220" dimension="0,0,1,1,1.0,1.0,18,1,0,0,0,0">
+		<node name="Claim" next_page="ClaimDetails" initial_page="ClaimPolicySearch">
+			<node name="Payee" next_page="Payee" />
+			<node name="Notes" next_page="ClaimNotes" />
+			<node name="Documents" next_page="ClaimDocuments" />
+			<action name="Save" image="gui/images/save.png" description="Save" />
+			<action name="Cancel" image="gui/images/cancel.png" description="Cancel" />
+			<action name="Close" image="gui/images/delete.png" description="Close" />
+		</node>
+	</panel>
+</page>

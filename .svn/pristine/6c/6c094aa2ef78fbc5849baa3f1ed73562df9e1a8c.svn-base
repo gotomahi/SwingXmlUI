@@ -1,0 +1,40 @@
+package com.service.bom.makemodel;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import junit.framework.TestCase;
+
+import com.autoinsure.service.bom.makemodel.MakeModelService;
+import com.framework.bom.ServiceFactory;
+
+/**
+ * 
+ * @author mahendra
+ * 
+ * @date 20 Nov 2011
+ */
+public class MakeModelTest extends TestCase {
+	private MakeModelService makeModelService;
+
+	@Override
+	protected void setUp() throws Exception {
+		makeModelService = (MakeModelService) ServiceFactory.getServiceFactory().getService("makeModelService");
+	}
+
+	public void testMakeModelSearch() {
+		Map criteria = new HashMap();
+		criteria.put("make", "Ford");
+		criteria.put("model", "Fiesta");
+		criteria.put("clss", "ALL");
+		criteria.put("clientId", new Long(1));
+		List makeModels = makeModelService.getMakeModels(criteria);
+		assertTrue(makeModels.size() > 0);
+	}
+
+	@Override
+	protected void tearDown() throws Exception {
+		makeModelService = null;
+	}
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Policy" Layout="Grid">
+	<TreePane treepane="true" divider_location="220" dimension="0,0,0,0,1.0,1.0,18,3,0,0,0,0">
+		<node name="Plan" next_page="Prelim" action_service="prelimDetails">
+			<node name="Vehicle" next_page="Vehicle" image="gui/images/vehicle.png" />
+			<node name="Customer" next_page="Customer" action_service="" image="gui/images/customer.png" />
+			<node name="Documents" next_page="PolicyDocuments" action_service="" image="gui/images/documents.png" />
+			<node name="Notes" next_page="PolicyNotes" action_service="" image="gui/images/notes.png" />
+			<node name="Claims" next_page="Claims" action_service="" image="gui/images/claims.png" >
+				<node name="claimNumber" sub_tree_data="policyMap.claims" next_page="ClaimDetails" action_service="">
+					<node name="Documents" next_page="ClaimDocuments" action_service="" image="gui/images/documents.png" />
+					<node name="Notes" next_page="ClaimNotes" action_service="" image="gui/images/notes.png" />
+				</node>
+			</node>
+			<popup_menu>
+				<menu-item name="Save" />
+				<menu-item name="Transfer" />
+				<menu-item name="Cancel" />
+				<menu-item name="Authorization"/>
+				<menu-item name="Close"/>
+			</popup_menu>
+		</node>
+	</TreePane>
+</PanelPage>

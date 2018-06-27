@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org" xmlns="http://www.example.org" elementFormDefault="qualified">
+	<xs:include schemaLocation="CommonTypes.xsd" />
+	<xs:element name="Page">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="action" type="ActionClassType" minOccurs="1" />
+				<xs:element name="panel" type="PanelType" minOccurs="1" />
+			</xs:sequence>
+			<xs:attribute name="name" type="NameType" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="PanelType">
+		<xs:choice>
+			<xs:element name="panel" type="PanelType" minOccurs="0" />
+			<xs:element name="node" type="NodeType" minOccurs="0" />
+			<xs:element name="property" minOccurs="0">
+				<xs:complexType>
+					<xs:attributeGroup ref="PropertyAttsGroup" />
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attributeGroup ref="PanelAttsGroup" />
+	</xs:complexType>
+
+	<xs:complexType name="NodeType">
+		<xs:choice>
+			<xs:element name="action" type="ActionType" minOccurs="0" />
+			<xs:element name="node" type="NodeType" minOccurs="0" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:attributeGroup name="PropertyAttsGroup">
+		<xs:attribute name="type" type="PropertyType" use="required"/>
+		<xs:attribute name="position" type="PositionType" use="required"/>
+		<xs:attribute name="label" type="LabelType" />
+		<xs:attribute name="name" type="NameType" />
+		<xs:attribute name="size" type="SizeType" />
+		<xs:attribute name="actionName" type="ActionNameType" />
+		<xs:attribute name="list" type="ListType" />
+		<xs:attribute name="listeners" type="ListenersType" />
+		<xs:attribute name="default_value" type="DefaultValueType" />
+		<xs:attribute name="default" type="xs:boolean" />
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="PanelAttsGroup">
+		<xs:attribute name="treepane" type="TreePaneType" />
+		<xs:attribute name="divider_location" type="DividerLocationType" />
+		<xs:attribute name="dimension" type="DimensionType" />
+	</xs:attributeGroup>
+</xs:schema>

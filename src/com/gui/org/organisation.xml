@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PanelPage name="Organisation">
+	<Panel dimension="0,0,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<Label label="Organisation" position="0,0" size="80,25"/>
+		<TextField name="orgName" position="1,0" size="150,25"/>
+		<Label label="Client" position="0,1" size="80,25"/>
+		<ComboBox name="client" list="clients" labelProperty="clientName" valueProperty="clientId" position="1,1" size="150,25"/>		
+	</Panel>
+	<Panel dimension="0,1,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<Button name="Search" action_command="SearchOrgs" default="true" position="0,0" size="80,25" />
+		<Button name="Save" action_command="SaveOrgs" position="1,0,1" size="80,25" />
+		<Button name="Reset" position="2,0" size="80,25" />
+	</Panel>
+	<Panel dimension="0,2,1,1,1.0,1.0,18,1,-5,0,0,0">
+		<DataGrid name="OrgList" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0">
+			<column property="orgName" name="Organisation" editable="true" />
+			<column property="client" name="Client" renderer_label="clientName" renderer="Combobox" renderer_data="clients" editable="true" />
+			<column property="address1" name="House No" />
+			<column property="address2" name="Street" />
+			<popup-menu>
+				<menu-item name="Edit" />
+				<menu-item name="Delete" />
+				<menu-item name="New" />
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="New" image="gui/images/add.png" />
+				<toolbar name="Edit" image="gui/images/edit.png" />
+				<toolbar name="Delete" image="gui/images/delete.png" />
+			</toolbars>
+		</DataGrid>
+	</Panel>
+
+</PanelPage>

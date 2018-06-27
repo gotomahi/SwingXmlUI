@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+	<rule name="DefaultTermRule" class="com.autoinsure.common.framework.rule.TerMRule" />
+</rules>

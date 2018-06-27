@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page name="ClaimSearch" menu_visible="true">
+	<action>com.gui.claim.ClaimSearchAction</action>
+	<panel dimension="0,0,1,1,1.0,1.0,12,1,-5,5,5,5">
+		<property label="Claim Number" type="Label" position="0,0" size="80,25" />
+		<property name="criteria.claimNumber" type="TextField" position="1,0" size="150,25" />
+		<property label="Policy Number" type="Label" position="2,0" size="80,25" />
+		<property name="criteria.policyNumber" type="TextField" position="3,0" size="150,25" />
+		<property label="Reg No" type="Label" position="0,1" size="80,25" />
+		<property name="criteria.policyNumber.regNo" type="TextField" position="1,1" size="150,25" />
+	</panel>
+	<panel dimension="0,1,1,1,1.0,1.0,10,1,-5,0,0,0">
+		<property name="Search" type="Button" default="true" position="0,0" size="80,25" />
+		<property name="Reset" type="Button" position="1,0" size="80,25" />
+	</panel>
+	<panel dimension="0,2,1,1,1.0,1.0,18,1,-5,0,0,0">
+		<datagrid name="claimList" row-height="25" dimension="0,0,1,1,1.0,1.0,18,1,-5,0,0,0">
+			<column property="claimNumber" name="Claim Number" />
+			<column property="policyNumber" name="Policy Number" />
+			<column property="failureDate" name="Failure Date" />
+			<column property="reportedDate" name="Reported Date" />
+			<popup-menu>
+				<menu-item name="Load" image="gui/images/edit.png" next_page="Claim.ClaimDetails" />
+			</popup-menu>
+			<toolbars position="0,1">
+				<toolbar name="Load" image="gui/images/edit.png" edit="true" next_page="Claim.ClaimDetails" />
+			</toolbars>
+		</datagrid>
+	</panel>
+
+</page>
