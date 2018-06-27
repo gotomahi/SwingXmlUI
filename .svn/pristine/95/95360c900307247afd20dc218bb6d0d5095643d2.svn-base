@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configs>
-<config name="Host" value="localhost" />
-<config name="Port" value="25" />
-</configs>

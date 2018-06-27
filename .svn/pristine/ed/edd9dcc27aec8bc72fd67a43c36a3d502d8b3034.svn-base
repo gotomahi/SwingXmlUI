@@ -1,4 +1,0 @@
-resource.duplicate.msg=Duplicate resource
-wrong.password=Password is wrong
-password.notequal=New password and confirm new password are not same
-error.invalidendate=End Date must be before the Start Date.

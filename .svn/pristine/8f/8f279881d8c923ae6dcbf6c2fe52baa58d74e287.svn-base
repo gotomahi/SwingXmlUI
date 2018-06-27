@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bands>
-	<band name="coverPeriod" class="com.autoinsure.policy.bands.CoverPeriodBand" />
-	<band name="coverType" class="com.autoinsure.policy.bands.CoverTypeBand" />
-</bands>

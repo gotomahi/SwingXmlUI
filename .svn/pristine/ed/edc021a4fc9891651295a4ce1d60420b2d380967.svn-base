@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<screen-config>
-	<screen name="Dealer" file="com/gui/org/dealer.xml" />
-	<screen name="DealerVariable" file="com/gui/org/dealer_variable.xml" />
-	<screen name="Client" file="com/gui/org/client.xml" />
-	<screen name="Organisation" file="com/gui/org/organisation.xml" />
-</screen-config>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<page name="Home" menu_visible="true">
-	<action>com.gui.ForwardAction</action>
-	<panel dimension="0,0,1,1,1.0,1.0,12,1,0,0,0,0">
-		<property label="Choose menu item to procede." type="Label" position="0,0" size="200,25" />
-	</panel>
-</page>
